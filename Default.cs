@@ -19,7 +19,7 @@ namespace sale
         }
         SqlDataAdapter daProduct;//适配器对象
         DataSet ds =new DataSet();//
-
+        public static string Goods_id;
         void init()//
         {
             DB.Getcn();
@@ -114,6 +114,44 @@ namespace sale
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                for (int i=0; i < dataGridView1.Rows.Count; i++)
+                {
+                    DataGridViewCheckBoxCell ck = dataGridView1.Rows[i].Cells["acCode"] as DataGridViewCheckBoxCell;
+                    if (i != e.RowIndex)
+                    {
+                        ck.Value=false;
+                    }
+                    else
+                    {
+                        ck.Value = true;
+                    }
+
+                }
+            }
+        }
+
+        private void 查询_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    string _selectValue = dataGridView1.Rows[i].Cells["acCode"].EditedFormattedValue.ToString();
+                    if (_selectValue == "True")
+                    {
+                       // Goods_id = dataGridView1.Rows[i].Cells["Goods_id"].Value.ToString();
+                        Goods_id = dataGridView1.Rows[i].Cells["Goods_id"].Value.ToString();
+                    }
+                }
+            }
+            CHX_Product ch1 = new CHX_Product();
+            ch1.Show();
         }
     }
 }

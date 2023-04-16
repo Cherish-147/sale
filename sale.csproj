@@ -52,6 +52,12 @@
     <Compile Include="CHpwd.Designer.cs">
       <DependentUpon>CHpwd.cs</DependentUpon>
     </Compile>
+    <Compile Include="CHX_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHX_Product.Designer.cs">
+      <DependentUpon>CHX_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="Default.cs">
       <SubType>Form</SubType>
@@ -81,6 +87,9 @@
     </Compile>
     <EmbeddedResource Include="CHpwd.resx">
       <DependentUpon>CHpwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHX_Product.resx">
+      <DependentUpon>CHX_Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
