@@ -257,11 +257,12 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(687, 374);
+            this.listBox1.ItemHeight = 14;
+            this.listBox1.Location = new System.Drawing.Point(302, 262);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(113, 64);
+            this.listBox1.Size = new System.Drawing.Size(179, 102);
             this.listBox1.TabIndex = 20;
             // 
             // button1

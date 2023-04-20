@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="administrator\employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator\employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="administrator\index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator\index.Designer.cs">
+      <DependentUpon>index.cs</DependentUpon>
+    </Compile>
     <Compile Include="CHpwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +98,22 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="海产品管理系统DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>海产品管理系统DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="海产品管理系统DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>海产品管理系统DataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="administrator\employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrator\index.resx">
+      <DependentUpon>index.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CHpwd.resx">
       <DependentUpon>CHpwd.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,9 +150,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="海产品管理系统DataSet.xsc">
+      <DependentUpon>海产品管理系统DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="海产品管理系统DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>海产品管理系统DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="海产品管理系统DataSet.xss">
+      <DependentUpon>海产品管理系统DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="海产品管理系统DataSet1.xsc">
+      <DependentUpon>海产品管理系统DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="海产品管理系统DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>海产品管理系统DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="海产品管理系统DataSet1.xss">
+      <DependentUpon>海产品管理系统DataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -76,7 +76,7 @@ namespace sale
 
         private void label11_Click(object sender, EventArgs e)
         {
-
+           //点多了响应事件不可删除
         }
     }
 }

@@ -22,7 +22,7 @@ namespace sale
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "")
+             if (textBox1.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("请输入用户名或密码");
             }
@@ -53,13 +53,16 @@ namespace sale
                 {
 
                     string str = "select * from Users  where username='"
-                        + textBox1.Text + "' and pwd='" + textBox2.Text + "'and keys=2";
+                        + textBox1.Text + "' and pwd='" + textBox2.Text + "'and keys=2"; 
                     DataTable dt = DB.GetDataSet(str);
                     if (dt.Rows.Count > 0)
                     {
                         MessageBox.Show("登陆成功");
+                        username = textBox1.Text;
                         flag = true;
                         this.Close();
+                        administrator.index i1 = new administrator.index();
+                        i1.Show(); 
                     }
                     else
                     {
