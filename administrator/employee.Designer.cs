@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_save = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.combo_sex = new System.Windows.Forms.ComboBox();
             this.combo_department = new System.Windows.Forms.ComboBox();
             this.departmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.海产品管理系统DataSet1 = new sale.海产品管理系统DataSet1();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.text_resume = new System.Windows.Forms.TextBox();
             this.text_wages = new System.Windows.Forms.TextBox();
             this.text_phone = new System.Windows.Forms.TextBox();
             this.btnReback = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.text_address = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -82,11 +83,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.combo_sex);
             this.groupBox1.Controls.Add(this.combo_department);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.text_resume);
             this.groupBox1.Controls.Add(this.text_wages);
             this.groupBox1.Controls.Add(this.text_phone);
             this.groupBox1.Controls.Add(this.btnReback);
@@ -96,7 +98,7 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.text_address);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -111,6 +113,18 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "添加员工信息加*号必填";
+            // 
+            // btn_save
+            // 
+            this.btn_save.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_save.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_save.Location = new System.Drawing.Point(718, 192);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(83, 34);
+            this.btn_save.TabIndex = 23;
+            this.btn_save.Text = "保存";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // dateTimePicker2
             // 
@@ -158,13 +172,13 @@
             this.海产品管理系统DataSet1.DataSetName = "海产品管理系统DataSet1";
             this.海产品管理系统DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox5
+            // text_resume
             // 
-            this.textBox5.Location = new System.Drawing.Point(694, 80);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 76);
-            this.textBox5.TabIndex = 19;
+            this.text_resume.Location = new System.Drawing.Point(694, 80);
+            this.text_resume.Multiline = true;
+            this.text_resume.Name = "text_resume";
+            this.text_resume.Size = new System.Drawing.Size(100, 76);
+            this.text_resume.TabIndex = 19;
             // 
             // text_wages
             // 
@@ -188,8 +202,9 @@
             this.btnReback.Name = "btnReback";
             this.btnReback.Size = new System.Drawing.Size(85, 35);
             this.btnReback.TabIndex = 15;
-            this.btnReback.Text = "取消";
+            this.btnReback.Text = "撤销";
             this.btnReback.UseVisualStyleBackColor = true;
+            this.btnReback.Click += new System.EventHandler(this.btnReback_Click);
             // 
             // btnReset
             // 
@@ -201,6 +216,7 @@
             this.btnReset.TabIndex = 14;
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnAdd
             // 
@@ -212,6 +228,7 @@
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label11
             // 
@@ -253,13 +270,13 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "电话*";
             // 
-            // textBox1
+            // text_address
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 80);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 73);
-            this.textBox1.TabIndex = 8;
+            this.text_address.Location = new System.Drawing.Point(45, 80);
+            this.text_address.Multiline = true;
+            this.text_address.Name = "text_address";
+            this.text_address.Size = new System.Drawing.Size(183, 73);
+            this.text_address.TabIndex = 8;
             // 
             // label7
             // 
@@ -403,7 +420,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox combo_sex;
         private System.Windows.Forms.ComboBox combo_department;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox text_resume;
         private System.Windows.Forms.TextBox text_wages;
         private System.Windows.Forms.TextBox text_phone;
         private System.Windows.Forms.Button btnReback;
@@ -413,7 +430,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox text_address;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -430,5 +447,6 @@
         private 海产品管理系统DataSet1 海产品管理系统DataSet1;
         private System.Windows.Forms.BindingSource departmentBindingSource1;
         private 海产品管理系统DataSet1TableAdapters.DepartmentTableAdapter departmentTableAdapter1;
+        private System.Windows.Forms.Button btn_save;
     }
 }
