@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace sale.administrator
 {
@@ -17,7 +18,7 @@ namespace sale.administrator
         {
             InitializeComponent();
         }
-        SqlDataAdapter daEmployee,daLog;
+        SqlDataAdapter daEmployee,daLog,daDepartment;
         
         DataSet ds = new DataSet();
 
@@ -26,10 +27,14 @@ namespace sale.administrator
             DB.Getcn();
             string str = "select * from Employee";
             string slr = "select * from log";
+            string spr = "select * from Department";
             daEmployee = new SqlDataAdapter(str, DB.cn);
             daLog = new SqlDataAdapter(slr, DB.cn);
+            daDepartment = new SqlDataAdapter(spr, DB.cn);
+            
             daEmployee.Fill(ds, "employee_info");
             daLog.Fill(ds, "log_info");
+            daDepartment.Fill(ds, "department_info");
             DB.cn.Close();
         }
         void showAll()//显示全部
@@ -90,6 +95,37 @@ namespace sale.administrator
                         ck.Value = true;
                     }
 
+                }
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    string _selectValue = dataGridView1.Rows[i].Cells["acCode"].EditedFormattedValue.ToString();
+                    if (_selectValue == "True")
+                    {
+                        text_id2.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                        text_name2.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                        combo_sex2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                        dateTimePicker3.Value=Convert.ToDateTime(dataGridView1.Rows[i].Cells[3].Value.ToString()); 
+                        dateTimePicker4.Value=Convert.ToDateTime(dataGridView1.Rows[i].Cells[4].Value.ToString()); 
+                        text_address2.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                        text_phone2.Text= dataGridView1.Rows[i].Cells[6].Value.ToString();
+                        text_wages2.Text= dataGridView1.Rows[i].Cells[7].Value.ToString();
+
+
+
+                        DataRow[] daDepartment = ds.Tables["department_info"].Select("Department_id='" 
+                            + dataGridView1.Rows[i].Cells[8].Value.ToString() + "'");
+
+
+
+
+
+                        //DataRow[] daDepartment = ds.Tables["department_info"].Select("Department_id='"
+                        //    + dataGridView1.Rows[i].Cells[8].Value.ToString() + "'");
+
+                        //combo_department2.Text = drDep[0]["department_name"].ToString();
+
+                        text_resume2.Text = dataGridView1.Rows[i].Cells[9].Value.ToString();
+                    }
                 }
             }
         }
@@ -153,6 +189,7 @@ namespace sale.administrator
                         drLog["type"] = "添加";
                         drLog["action_date"] = DateTime.Now;
                         drLog["action_table"] = "Employee表";
+                        drLog["log_main"] = "修改了Employee_id为" + text_id.Text + "的员工";
                         ds.Tables["log_info"].Rows.Add(drLog);
 
 
@@ -170,6 +207,65 @@ namespace sale.administrator
             text_phone.Text = "";
             text_wages.Text = "";
             text_resume.Text = "";
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)//修改
+        {
+            if (DateTime.Today.Year - dateTimePicker3.Value.Year < 18)
+            {
+                MessageBox.Show("员工年龄不能小于18岁");
+            }
+            else
+            {
+                if (text_name2.Text == "")
+                {
+                    MessageBox.Show("员工姓名不能为空");
+
+                }
+                else
+                {
+                    DataRow[] EmRows = ds.Tables["employee_info"].Select("Employee_id='" +
+                      dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString()+"'");
+                    EmRows[0]["Employee_name"]=text_name2.Text;
+                    EmRows[0]["Sex"] = combo_sex2.Text;
+                    EmRows[0]["Birth_date"] = dateTimePicker3.Value;
+                    EmRows[0]["Hire_date"]=dateTimePicker4.Value;
+                    EmRows[0]["Address"]=text_address2.Text;
+                    EmRows[0]["Telephone"]=text_phone2.Text;
+                    EmRows[0]["Wages"]=text_wages2.Text;
+                    EmRows[0]["Department_id"]=combo_department2.Text;
+
+
+                    DataRow drlog = ds.Tables["log_info"].NewRow();//添加日志表
+                    drlog["username"] = Login.username;
+                    drlog["action_date"] = DateTime.Now;
+                    drlog["action_table"] = "Employee表";
+                    drlog["type"] = "修改";
+                    drlog["log_main"] = "修改了员工编号为" + text_id2.Text + "的员工";
+                    ds.Tables["log_info"].Rows.Add(drlog);
+                }
+            }
+        }
+
+        private void btn_save2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlCommandBuilder dbEmployee =new SqlCommandBuilder(daEmployee);
+                SqlCommandBuilder dbLog =new SqlCommandBuilder(daLog);
+                daEmployee.Update(ds, "employee_info");
+                daLog.Update(ds, "log_info");
+                MessageBox.Show("修改成功");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Reback2_Click(object sender, EventArgs e)
+        {
+            ds.RejectChanges();
         }
 
         private void btnReback_Click(object sender, EventArgs e)//撤销

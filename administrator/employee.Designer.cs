@@ -63,6 +63,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.departmentTableAdapter = new sale.海产品管理系统DataSetTableAdapters.DepartmentTableAdapter();
             this.departmentTableAdapter1 = new sale.海产品管理系统DataSet1TableAdapters.DepartmentTableAdapter();
+            this.label12 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.text_id2 = new System.Windows.Forms.TextBox();
+            this.text_address2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.text_name2 = new System.Windows.Forms.TextBox();
+            this.text_phone2 = new System.Windows.Forms.TextBox();
+            this.text_wages2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.combo_sex2 = new System.Windows.Forms.ComboBox();
+            this.combo_department2 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.text_resume2 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btn_save2 = new System.Windows.Forms.Button();
+            this.btn_Reback2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource1)).BeginInit();
@@ -388,11 +412,258 @@
             // 
             this.departmentTableAdapter1.ClearBeforeFill = true;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("幼圆", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(23, 599);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 14);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "员工编号*";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("幼圆", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(224, 599);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 14);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "员工姓名*";
+            // 
+            // text_id2
+            // 
+            this.text_id2.AcceptsReturn = true;
+            this.text_id2.Location = new System.Drawing.Point(95, 596);
+            this.text_id2.Name = "text_id2";
+            this.text_id2.ReadOnly = true;
+            this.text_id2.Size = new System.Drawing.Size(100, 21);
+            this.text_id2.TabIndex = 10;
+            // 
+            // text_address2
+            // 
+            this.text_address2.Location = new System.Drawing.Point(76, 662);
+            this.text_address2.Multiline = true;
+            this.text_address2.Name = "text_address2";
+            this.text_address2.Size = new System.Drawing.Size(145, 71);
+            this.text_address2.TabIndex = 11;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("幼圆", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(23, 679);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 14);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "地址";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("幼圆", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(237, 679);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(45, 14);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "电话*";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("幼圆", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(237, 715);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 14);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "工资";
+            // 
+            // text_name2
+            // 
+            this.text_name2.Location = new System.Drawing.Point(298, 598);
+            this.text_name2.Name = "text_name2";
+            this.text_name2.Size = new System.Drawing.Size(100, 21);
+            this.text_name2.TabIndex = 15;
+            // 
+            // text_phone2
+            // 
+            this.text_phone2.Location = new System.Drawing.Point(298, 670);
+            this.text_phone2.Name = "text_phone2";
+            this.text_phone2.Size = new System.Drawing.Size(100, 21);
+            this.text_phone2.TabIndex = 16;
+            // 
+            // text_wages2
+            // 
+            this.text_wages2.Location = new System.Drawing.Point(298, 712);
+            this.text_wages2.Name = "text_wages2";
+            this.text_wages2.Size = new System.Drawing.Size(100, 21);
+            this.text_wages2.TabIndex = 17;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("幼圆", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(452, 606);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 14);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "性别";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("幼圆", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.Location = new System.Drawing.Point(420, 671);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 14);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "所属部门id";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label19.Location = new System.Drawing.Point(637, 606);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(57, 12);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "出生日期";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label20.Location = new System.Drawing.Point(661, 679);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(31, 12);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "简介";
+            // 
+            // combo_sex2
+            // 
+            this.combo_sex2.FormattingEnabled = true;
+            this.combo_sex2.Items.AddRange(new object[] {
+            "男",
+            "女"});
+            this.combo_sex2.Location = new System.Drawing.Point(509, 599);
+            this.combo_sex2.Name = "combo_sex2";
+            this.combo_sex2.Size = new System.Drawing.Size(121, 20);
+            this.combo_sex2.TabIndex = 22;
+            // 
+            // combo_department2
+            // 
+            this.combo_department2.DataSource = this.departmentBindingSource1;
+            this.combo_department2.DisplayMember = "Department_id";
+            this.combo_department2.FormattingEnabled = true;
+            this.combo_department2.Location = new System.Drawing.Point(509, 670);
+            this.combo_department2.Name = "combo_department2";
+            this.combo_department2.Size = new System.Drawing.Size(121, 20);
+            this.combo_department2.TabIndex = 23;
+            this.combo_department2.ValueMember = "Department_id";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(706, 597);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(166, 21);
+            this.dateTimePicker3.TabIndex = 24;
+            // 
+            // text_resume2
+            // 
+            this.text_resume2.Location = new System.Drawing.Point(714, 670);
+            this.text_resume2.Multiline = true;
+            this.text_resume2.Name = "text_resume2";
+            this.text_resume2.Size = new System.Drawing.Size(111, 94);
+            this.text_resume2.TabIndex = 25;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.Location = new System.Drawing.Point(884, 601);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(57, 12);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "入职时间";
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(951, 599);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(146, 21);
+            this.dateTimePicker4.TabIndex = 27;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("幼圆", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(298, 795);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 47);
+            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.Text = "修改";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btn_save2
+            // 
+            this.btn_save2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_save2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_save2.Location = new System.Drawing.Point(601, 795);
+            this.btn_save2.Name = "btn_save2";
+            this.btn_save2.Size = new System.Drawing.Size(100, 47);
+            this.btn_save2.TabIndex = 29;
+            this.btn_save2.Text = "保存";
+            this.btn_save2.UseVisualStyleBackColor = true;
+            this.btn_save2.Click += new System.EventHandler(this.btn_save2_Click);
+            // 
+            // btn_Reback2
+            // 
+            this.btn_Reback2.Font = new System.Drawing.Font("幼圆", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Reback2.ForeColor = System.Drawing.Color.Red;
+            this.btn_Reback2.Location = new System.Drawing.Point(445, 795);
+            this.btn_Reback2.Name = "btn_Reback2";
+            this.btn_Reback2.Size = new System.Drawing.Size(103, 47);
+            this.btn_Reback2.TabIndex = 30;
+            this.btn_Reback2.Text = "撤销";
+            this.btn_Reback2.UseVisualStyleBackColor = true;
+            this.btn_Reback2.Click += new System.EventHandler(this.btn_Reback2_Click);
+            // 
             // employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 717);
+            this.ClientSize = new System.Drawing.Size(1153, 868);
+            this.Controls.Add(this.btn_Reback2);
+            this.Controls.Add(this.btn_save2);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.dateTimePicker4);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.text_resume2);
+            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.combo_department2);
+            this.Controls.Add(this.combo_sex2);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.text_wages2);
+            this.Controls.Add(this.text_phone2);
+            this.Controls.Add(this.text_name2);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.text_address2);
+            this.Controls.Add(this.text_id2);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbluser);
@@ -448,5 +719,29 @@
         private System.Windows.Forms.BindingSource departmentBindingSource1;
         private 海产品管理系统DataSet1TableAdapters.DepartmentTableAdapter departmentTableAdapter1;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox text_id2;
+        private System.Windows.Forms.TextBox text_address2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox text_name2;
+        private System.Windows.Forms.TextBox text_phone2;
+        private System.Windows.Forms.TextBox text_wages2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox combo_sex2;
+        private System.Windows.Forms.ComboBox combo_department2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TextBox text_resume2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btn_save2;
+        private System.Windows.Forms.Button btn_Reback2;
     }
 }
