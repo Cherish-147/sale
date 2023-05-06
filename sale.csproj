@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="administrator\department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator\department.Designer.cs">
+      <DependentUpon>department.cs</DependentUpon>
+    </Compile>
     <Compile Include="administrator\employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>海产品管理系统DataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="administrator\department.resx">
+      <DependentUpon>department.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="administrator\employee.resx">
       <DependentUpon>employee.cs</DependentUpon>
     </EmbeddedResource>

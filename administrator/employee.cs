@@ -247,7 +247,7 @@ namespace sale.administrator
             }
         }
 
-        private void btn_save2_Click(object sender, EventArgs e)
+        private void btn_save2_Click(object sender, EventArgs e)//保存2
         {
             try
             {
@@ -263,7 +263,7 @@ namespace sale.administrator
             }
         }
 
-        private void btn_Reback2_Click(object sender, EventArgs e)
+        private void btn_Reback2_Click(object sender, EventArgs e)//撤销2
         {
             ds.RejectChanges();
         }

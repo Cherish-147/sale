@@ -22,5 +22,11 @@ namespace sale.administrator
             employee e1 = new employee();
             e1.Show();
         }
+
+        private void 部门信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            department d1 = new department();
+            d1.Show();
+        }
     }
 }
