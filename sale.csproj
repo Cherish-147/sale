@@ -65,6 +65,12 @@
     <Compile Include="administrator\index.Designer.cs">
       <DependentUpon>index.cs</DependentUpon>
     </Compile>
+    <Compile Include="administrator\Sell_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator\Sell_order.Designer.cs">
+      <DependentUpon>Sell_order.cs</DependentUpon>
+    </Compile>
     <Compile Include="CHpwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>海产品管理系统DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="海产品管理系统DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>海产品管理系统DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="海产品管理系统DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>海产品管理系统DataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="administrator\department.resx">
       <DependentUpon>department.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="administrator\index.resx">
       <DependentUpon>index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrator\Sell_order.resx">
+      <DependentUpon>Sell_order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CHpwd.resx">
       <DependentUpon>CHpwd.cs</DependentUpon>
@@ -180,6 +199,28 @@
     </None>
     <None Include="海产品管理系统DataSet1.xss">
       <DependentUpon>海产品管理系统DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="海产品管理系统DataSet2.xsc">
+      <DependentUpon>海产品管理系统DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="海产品管理系统DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>海产品管理系统DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="海产品管理系统DataSet2.xss">
+      <DependentUpon>海产品管理系统DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="海产品管理系统DataSet3.xsc">
+      <DependentUpon>海产品管理系统DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="海产品管理系统DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>海产品管理系统DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="海产品管理系统DataSet3.xss">
+      <DependentUpon>海产品管理系统DataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

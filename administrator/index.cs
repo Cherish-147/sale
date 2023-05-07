@@ -28,5 +28,11 @@ namespace sale.administrator
             department d1 = new department();
             d1.Show();
         }
+
+        private void 订单信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sell_order sq =new Sell_order();
+            sq.Show();
+        }
     }
 }
