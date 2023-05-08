@@ -62,23 +62,27 @@
             this.btnRoback2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox_Discount = new System.Windows.Forms.TextBox();
+            this.dateTimePicker_Ariver_date = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_Send_date = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_Order_date = new System.Windows.Forms.DateTimePicker();
+            this.comboBox_Goods_id = new System.Windows.Forms.ComboBox();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.海产品管理系统DataSet3 = new sale.海产品管理系统DataSet3();
+            this.comboBox__Employee_id = new System.Windows.Forms.ComboBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.海产品管理系统DataSet2 = new sale.海产品管理系统DataSet2();
+            this.textBox_kg = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox_cost = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.textBox_Discount = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.textBox_cost2 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox_cost = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox_kg = new System.Windows.Forms.TextBox();
-            this.comboBox__Employee_id = new System.Windows.Forms.ComboBox();
-            this.comboBox_Goods_id = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker_Order_date = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_Send_date = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_Ariver_date = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Send_date2 = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -87,21 +91,17 @@
             this.label24 = new System.Windows.Forms.Label();
             this.dateTimePicker_Order_date2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Ariver_date2 = new System.Windows.Forms.DateTimePicker();
-            this.海产品管理系统DataSet2 = new sale.海产品管理系统DataSet2();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new sale.海产品管理系统DataSet2TableAdapters.EmployeeTableAdapter();
-            this.海产品管理系统DataSet3 = new sale.海产品管理系统DataSet3();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsTableAdapter = new sale.海产品管理系统DataSet3TableAdapters.GoodsTableAdapter();
-            this.comboBox__Employee_id2 = new System.Windows.Forms.ComboBox();
             this.comboBox_Goods_id2 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.comboBox__Employee_id2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -139,6 +139,7 @@
             this.btnDel.TabIndex = 16;
             this.btnDel.Text = "删除";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSave
             // 
@@ -150,6 +151,7 @@
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnRoback
             // 
@@ -161,6 +163,7 @@
             this.btnRoback.TabIndex = 14;
             this.btnRoback.Text = "撤销";
             this.btnRoback.UseVisualStyleBackColor = true;
+            this.btnRoback.Click += new System.EventHandler(this.btnRoback_Click);
             // 
             // btnReset
             // 
@@ -172,6 +175,7 @@
             this.btnReset.TabIndex = 13;
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnAdd
             // 
@@ -183,6 +187,7 @@
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // text_Transporter_id
             // 
@@ -280,6 +285,7 @@
             this.btnDel2.TabIndex = 37;
             this.btnDel2.Text = "删除";
             this.btnDel2.UseVisualStyleBackColor = true;
+            this.btnDel2.Click += new System.EventHandler(this.btnDel2_Click);
             // 
             // btnUpdate
             // 
@@ -291,6 +297,7 @@
             this.btnUpdate.TabIndex = 36;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label7
             // 
@@ -311,6 +318,7 @@
             this.btnSave2.TabIndex = 39;
             this.btnSave2.Text = "保存";
             this.btnSave2.UseVisualStyleBackColor = true;
+            this.btnSave2.Click += new System.EventHandler(this.btnSave2_Click);
             // 
             // label4
             // 
@@ -323,7 +331,7 @@
             // 
             // text_customers_id2
             // 
-            this.text_customers_id2.Location = new System.Drawing.Point(113, 753);
+            this.text_customers_id2.Location = new System.Drawing.Point(113, 747);
             this.text_customers_id2.Multiline = true;
             this.text_customers_id2.Name = "text_customers_id2";
             this.text_customers_id2.Size = new System.Drawing.Size(121, 21);
@@ -363,6 +371,7 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 282);
             this.dataGridView1.TabIndex = 23;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // label3
             // 
@@ -383,6 +392,7 @@
             this.btnRoback2.TabIndex = 38;
             this.btnRoback2.Text = "撤销";
             this.btnRoback2.UseVisualStyleBackColor = true;
+            this.btnRoback2.Click += new System.EventHandler(this.btnRoback2_Click);
             // 
             // label11
             // 
@@ -431,14 +441,134 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "添加销售订单信息加*号必填";
             // 
-            // label2
+            // dateTimePicker_Ariver_date
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "label2";
+            this.dateTimePicker_Ariver_date.Location = new System.Drawing.Point(308, 185);
+            this.dateTimePicker_Ariver_date.Name = "dateTimePicker_Ariver_date";
+            this.dateTimePicker_Ariver_date.Size = new System.Drawing.Size(121, 21);
+            this.dateTimePicker_Ariver_date.TabIndex = 32;
+            // 
+            // dateTimePicker_Send_date
+            // 
+            this.dateTimePicker_Send_date.Location = new System.Drawing.Point(99, 180);
+            this.dateTimePicker_Send_date.Name = "dateTimePicker_Send_date";
+            this.dateTimePicker_Send_date.Size = new System.Drawing.Size(122, 21);
+            this.dateTimePicker_Send_date.TabIndex = 31;
+            // 
+            // dateTimePicker_Order_date
+            // 
+            this.dateTimePicker_Order_date.Location = new System.Drawing.Point(806, 124);
+            this.dateTimePicker_Order_date.Name = "dateTimePicker_Order_date";
+            this.dateTimePicker_Order_date.Size = new System.Drawing.Size(116, 21);
+            this.dateTimePicker_Order_date.TabIndex = 30;
+            // 
+            // comboBox_Goods_id
+            // 
+            this.comboBox_Goods_id.DataSource = this.goodsBindingSource;
+            this.comboBox_Goods_id.DisplayMember = "Goods_id";
+            this.comboBox_Goods_id.FormattingEnabled = true;
+            this.comboBox_Goods_id.Location = new System.Drawing.Point(557, 33);
+            this.comboBox_Goods_id.Name = "comboBox_Goods_id";
+            this.comboBox_Goods_id.Size = new System.Drawing.Size(121, 20);
+            this.comboBox_Goods_id.TabIndex = 29;
+            this.comboBox_Goods_id.ValueMember = "Goods_id";
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataMember = "Goods";
+            this.goodsBindingSource.DataSource = this.海产品管理系统DataSet3;
+            // 
+            // 海产品管理系统DataSet3
+            // 
+            this.海产品管理系统DataSet3.DataSetName = "海产品管理系统DataSet3";
+            this.海产品管理系统DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBox__Employee_id
+            // 
+            this.comboBox__Employee_id.DataSource = this.employeeBindingSource;
+            this.comboBox__Employee_id.DisplayMember = "Employee_id";
+            this.comboBox__Employee_id.FormattingEnabled = true;
+            this.comboBox__Employee_id.Location = new System.Drawing.Point(308, 30);
+            this.comboBox__Employee_id.Name = "comboBox__Employee_id";
+            this.comboBox__Employee_id.Size = new System.Drawing.Size(121, 20);
+            this.comboBox__Employee_id.TabIndex = 28;
+            this.comboBox__Employee_id.ValueMember = "Employee_id";
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.海产品管理系统DataSet2;
+            // 
+            // 海产品管理系统DataSet2
+            // 
+            this.海产品管理系统DataSet2.DataSetName = "海产品管理系统DataSet2";
+            this.海产品管理系统DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textBox_kg
+            // 
+            this.textBox_kg.Location = new System.Drawing.Point(806, 195);
+            this.textBox_kg.Name = "textBox_kg";
+            this.textBox_kg.Size = new System.Drawing.Size(116, 21);
+            this.textBox_kg.TabIndex = 27;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(725, 194);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(29, 12);
+            this.label19.TabIndex = 26;
+            this.label19.Text = "千克";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(459, 195);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 12);
+            this.label18.TabIndex = 25;
+            this.label18.Text = "花费";
+            // 
+            // textBox_cost
+            // 
+            this.textBox_cost.Location = new System.Drawing.Point(557, 185);
+            this.textBox_cost.Name = "textBox_cost";
+            this.textBox_cost.Size = new System.Drawing.Size(121, 21);
+            this.textBox_cost.TabIndex = 24;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(227, 185);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 12);
+            this.label17.TabIndex = 22;
+            this.label17.Text = "到达日期";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(725, 124);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 12);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "订单日期";
+            // 
+            // textBox_Discount
+            // 
+            this.textBox_Discount.Location = new System.Drawing.Point(557, 115);
+            this.textBox_Discount.Name = "textBox_Discount";
+            this.textBox_Discount.Size = new System.Drawing.Size(121, 21);
+            this.textBox_Discount.TabIndex = 18;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(459, 115);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(35, 12);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "打折*";
             // 
             // label1
             // 
@@ -449,30 +579,14 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "发送日期";
             // 
-            // label15
+            // label2
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(459, 115);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 12);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "打折";
-            // 
-            // textBox_Discount
-            // 
-            this.textBox_Discount.Location = new System.Drawing.Point(557, 115);
-            this.textBox_Discount.Name = "textBox_Discount";
-            this.textBox_Discount.Size = new System.Drawing.Size(121, 21);
-            this.textBox_Discount.TabIndex = 18;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(725, 124);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 12);
-            this.label16.TabIndex = 19;
-            this.label16.Text = "订单日期";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(120, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "label2";
             // 
             // textBox_cost2
             // 
@@ -491,90 +605,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "当前用户是：";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(227, 185);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 12);
-            this.label17.TabIndex = 22;
-            this.label17.Text = "到达日期";
-            // 
-            // textBox_cost
-            // 
-            this.textBox_cost.Location = new System.Drawing.Point(557, 185);
-            this.textBox_cost.Name = "textBox_cost";
-            this.textBox_cost.Size = new System.Drawing.Size(121, 21);
-            this.textBox_cost.TabIndex = 24;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(459, 195);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 12);
-            this.label18.TabIndex = 25;
-            this.label18.Text = "花费";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(725, 194);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(29, 12);
-            this.label19.TabIndex = 26;
-            this.label19.Text = "千克";
-            // 
-            // textBox_kg
-            // 
-            this.textBox_kg.Location = new System.Drawing.Point(806, 195);
-            this.textBox_kg.Name = "textBox_kg";
-            this.textBox_kg.Size = new System.Drawing.Size(116, 21);
-            this.textBox_kg.TabIndex = 27;
-            // 
-            // comboBox__Employee_id
-            // 
-            this.comboBox__Employee_id.DataSource = this.employeeBindingSource;
-            this.comboBox__Employee_id.DisplayMember = "Employee_id";
-            this.comboBox__Employee_id.FormattingEnabled = true;
-            this.comboBox__Employee_id.Location = new System.Drawing.Point(308, 30);
-            this.comboBox__Employee_id.Name = "comboBox__Employee_id";
-            this.comboBox__Employee_id.Size = new System.Drawing.Size(121, 20);
-            this.comboBox__Employee_id.TabIndex = 28;
-            this.comboBox__Employee_id.ValueMember = "Employee_id";
-            // 
-            // comboBox_Goods_id
-            // 
-            this.comboBox_Goods_id.DataSource = this.goodsBindingSource;
-            this.comboBox_Goods_id.DisplayMember = "Goods_id";
-            this.comboBox_Goods_id.FormattingEnabled = true;
-            this.comboBox_Goods_id.Location = new System.Drawing.Point(557, 33);
-            this.comboBox_Goods_id.Name = "comboBox_Goods_id";
-            this.comboBox_Goods_id.Size = new System.Drawing.Size(121, 20);
-            this.comboBox_Goods_id.TabIndex = 29;
-            this.comboBox_Goods_id.ValueMember = "Goods_id";
-            // 
-            // dateTimePicker_Order_date
-            // 
-            this.dateTimePicker_Order_date.Location = new System.Drawing.Point(806, 124);
-            this.dateTimePicker_Order_date.Name = "dateTimePicker_Order_date";
-            this.dateTimePicker_Order_date.Size = new System.Drawing.Size(116, 21);
-            this.dateTimePicker_Order_date.TabIndex = 30;
-            // 
-            // dateTimePicker_Send_date
-            // 
-            this.dateTimePicker_Send_date.Location = new System.Drawing.Point(99, 180);
-            this.dateTimePicker_Send_date.Name = "dateTimePicker_Send_date";
-            this.dateTimePicker_Send_date.Size = new System.Drawing.Size(122, 21);
-            this.dateTimePicker_Send_date.TabIndex = 31;
-            // 
-            // dateTimePicker_Ariver_date
-            // 
-            this.dateTimePicker_Ariver_date.Location = new System.Drawing.Point(308, 185);
-            this.dateTimePicker_Ariver_date.Name = "dateTimePicker_Ariver_date";
-            this.dateTimePicker_Ariver_date.Size = new System.Drawing.Size(121, 21);
-            this.dateTimePicker_Ariver_date.TabIndex = 32;
-            // 
             // dateTimePicker_Send_date2
             // 
             this.dateTimePicker_Send_date2.Location = new System.Drawing.Point(105, 818);
@@ -587,9 +617,9 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(475, 751);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(29, 12);
+            this.label20.Size = new System.Drawing.Size(35, 12);
             this.label20.TabIndex = 41;
-            this.label20.Text = "打折";
+            this.label20.Text = "打折*";
             // 
             // label21
             // 
@@ -641,49 +671,24 @@
             this.dateTimePicker_Ariver_date2.Size = new System.Drawing.Size(121, 21);
             this.dateTimePicker_Ariver_date2.TabIndex = 47;
             // 
-            // 海产品管理系统DataSet2
-            // 
-            this.海产品管理系统DataSet2.DataSetName = "海产品管理系统DataSet2";
-            this.海产品管理系统DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.海产品管理系统DataSet2;
-            // 
             // employeeTableAdapter
             // 
             this.employeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // 海产品管理系统DataSet3
-            // 
-            this.海产品管理系统DataSet3.DataSetName = "海产品管理系统DataSet3";
-            this.海产品管理系统DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataMember = "Goods";
-            this.goodsBindingSource.DataSource = this.海产品管理系统DataSet3;
             // 
             // goodsTableAdapter
             // 
             this.goodsTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox__Employee_id2
-            // 
-            this.comboBox__Employee_id2.FormattingEnabled = true;
-            this.comboBox__Employee_id2.Location = new System.Drawing.Point(322, 676);
-            this.comboBox__Employee_id2.Name = "comboBox__Employee_id2";
-            this.comboBox__Employee_id2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox__Employee_id2.TabIndex = 48;
-            // 
             // comboBox_Goods_id2
             // 
+            this.comboBox_Goods_id2.DataSource = this.goodsBindingSource;
+            this.comboBox_Goods_id2.DisplayMember = "Goods_id";
             this.comboBox_Goods_id2.FormattingEnabled = true;
             this.comboBox_Goods_id2.Location = new System.Drawing.Point(571, 670);
             this.comboBox_Goods_id2.Name = "comboBox_Goods_id2";
             this.comboBox_Goods_id2.Size = new System.Drawing.Size(121, 20);
             this.comboBox_Goods_id2.TabIndex = 49;
+            this.comboBox_Goods_id2.ValueMember = "Goods_id";
             // 
             // label25
             // 
@@ -694,14 +699,25 @@
             this.label25.TabIndex = 50;
             this.label25.Text = "千克";
             // 
+            // comboBox__Employee_id2
+            // 
+            this.comboBox__Employee_id2.DataSource = this.employeeBindingSource;
+            this.comboBox__Employee_id2.DisplayMember = "Employee_id";
+            this.comboBox__Employee_id2.FormattingEnabled = true;
+            this.comboBox__Employee_id2.Location = new System.Drawing.Point(322, 673);
+            this.comboBox__Employee_id2.Name = "comboBox__Employee_id2";
+            this.comboBox__Employee_id2.Size = new System.Drawing.Size(121, 20);
+            this.comboBox__Employee_id2.TabIndex = 51;
+            this.comboBox__Employee_id2.ValueMember = "Employee_id";
+            // 
             // Sell_order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 957);
+            this.Controls.Add(this.comboBox__Employee_id2);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.comboBox_Goods_id2);
-            this.Controls.Add(this.comboBox__Employee_id2);
             this.Controls.Add(this.dateTimePicker_Ariver_date2);
             this.Controls.Add(this.dateTimePicker_Order_date2);
             this.Controls.Add(this.label24);
@@ -737,10 +753,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -812,8 +828,8 @@
         private 海产品管理系统DataSet3 海产品管理系统DataSet3;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private 海产品管理系统DataSet3TableAdapters.GoodsTableAdapter goodsTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox__Employee_id2;
         private System.Windows.Forms.ComboBox comboBox_Goods_id2;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox comboBox__Employee_id2;
     }
 }
