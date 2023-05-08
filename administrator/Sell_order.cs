@@ -73,8 +73,9 @@ namespace sale.administrator
 
         private void btnAdd_Click(object sender, EventArgs e)//添加1
         {
-            if(text_Order_id.Text=="" || text_Order_num.Text=="" ||text_customers_id.Text==""||textBox_cost.Text==""
-            ||comboBox__Employee_id.Items.Count == 0 || comboBox_Goods_id.Items.Count == 0)
+            if(text_Order_id.Text=="" || text_Order_num.Text=="" ||textBox_cost.Text==""||comboBox_Customers_id.Text==""
+            //||combobox__employee_id.items.count == 0 || combobox_goods_id.items.count == 0)
+            ||comboBox__Employee_id.Text=="" || comboBox_Goods_id.Text== "")
             {
                 MessageBox.Show("带*号的必须是必填项，不能为空");
             }
@@ -94,7 +95,7 @@ namespace sale.administrator
                     drSo["Employee_id"] = comboBox__Employee_id.Text;
                     drSo["Goods_id"]=comboBox_Goods_id.Text;
                     drSo["Order_num"]=text_Order_num.Text;
-                    drSo["customers_id"] = text_customers_id.Text;
+                    drSo["customers_id"] = comboBox_Customers_id.Text;
                     drSo["Transporter_id"]=text_Transporter_id.Text;
                     drSo["Discount"]=textBox_Discount.Text;
                     drSo["Order_date"]=dateTimePicker_Order_date.Text;
@@ -128,7 +129,7 @@ namespace sale.administrator
             
             
             text_Order_num.Text="";
-            text_customers_id.Text="";
+            comboBox_Customers_id.Text="";
             text_Transporter_id.Text = "";
             textBox_Discount.Text="";
             
@@ -170,7 +171,7 @@ namespace sale.administrator
 
         private void btnUpdate_Click(object sender, EventArgs e)//修改
         {
-            if (text_customers_id2.Text == "")
+            if (comboBox_Customers_id2.Text == "")
             {
                 MessageBox.Show("顾客编号不能为空");
                
@@ -195,7 +196,7 @@ namespace sale.administrator
                 //DeRows[0]["Goods_id"] = comboBox_Goods_id2.Items.Count;
                 DeRows[0]["Goods_id"] = comboBox_Goods_id2.Text;
                 DeRows[0]["Order_num"] = text_Order_num2.Text;
-                DeRows[0]["customers_id"] = text_customers_id2.Text;
+                DeRows[0]["customers_id"] = comboBox_Customers_id2.Text;
                 DeRows[0]["Transporter_id"] = text_Transporter_id2.Text;
                 DeRows[0]["Discount"] = textBox_Discount2.Text;
                 DeRows[0]["Order_date"] = dateTimePicker_Order_date2.Text;
@@ -273,7 +274,7 @@ namespace sale.administrator
                         comboBox__Employee_id2.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
                         comboBox_Goods_id2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
                         text_Order_num2.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                        text_customers_id2.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                        comboBox_Customers_id2.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
                         text_Transporter_id2.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
                         textBox_Discount2.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
                         dateTimePicker_Order_date2.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
@@ -288,6 +289,8 @@ namespace sale.administrator
         }
         private void Sell_order_Load(object sender, EventArgs e)//窗体响应事件加载
         {
+            // TODO: 这行代码将数据加载到表“海产品管理系统DataSet4.Customers”中。您可以根据需要移动或移除它。
+            this.customersTableAdapter.Fill(this.海产品管理系统DataSet4.Customers);
             // TODO: 这行代码将数据加载到表“海产品管理系统DataSet3.Goods”中。您可以根据需要移动或移除它。
             this.goodsTableAdapter.Fill(this.海产品管理系统DataSet3.Goods);
             // TODO: 这行代码将数据加载到表“海产品管理系统DataSet2.Employee”中。您可以根据需要移动或移除它。
