@@ -127,7 +127,8 @@ namespace sale.administrator
             }
             else
             {
-                string str = "select * from Supplier where Supplier_id='" + goods_id + "'";
+                string str = "select * from Goods where Supplier_id='" + goods_id + "'";
+                //string str = "select * from category where Classification_id='" + goods_id + "'";
                // string str1 = "select * from category where Classification_id'" + goods_id + "'";
                // string str2 = "select * from Storehouse where Storehouse_id='" + goods_id + "'";
                 //datatable dt1 = db.getdataset(str1);
@@ -182,6 +183,16 @@ namespace sale.administrator
                 MessageBox.Show(ex.Message);
             }
             DB.cn.Close();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
 
         private void Goods_Load(object sender, EventArgs e)
