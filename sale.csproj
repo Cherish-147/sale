@@ -136,11 +136,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>海产品管理系统DataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="海产品管理系统DataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>海产品管理系统DataSet4.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="administrator\department.resx">
       <DependentUpon>department.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,17 +230,6 @@
     </None>
     <None Include="海产品管理系统DataSet3.xss">
       <DependentUpon>海产品管理系统DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="海产品管理系统DataSet4.xsc">
-      <DependentUpon>海产品管理系统DataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="海产品管理系统DataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>海产品管理系统DataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="海产品管理系统DataSet4.xss">
-      <DependentUpon>海产品管理系统DataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

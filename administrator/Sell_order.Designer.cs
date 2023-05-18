@@ -43,6 +43,7 @@
             this.textBox_Discount2 = new System.Windows.Forms.TextBox();
             this.text_Order_num2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.text_customers_id = new System.Windows.Forms.TextBox();
             this.text_Order_id = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnSave2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.text_customers_id2 = new System.Windows.Forms.TextBox();
             this.text_Order_id2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -94,19 +96,12 @@
             this.comboBox_Goods_id2 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.comboBox__Employee_id2 = new System.Windows.Forms.ComboBox();
-            this.comboBox_Customers_id = new System.Windows.Forms.ComboBox();
-            this.海产品管理系统DataSet4 = new sale.海产品管理系统DataSet4();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersTableAdapter = new sale.海产品管理系统DataSet4TableAdapters.CustomersTableAdapter();
-            this.comboBox_Customers_id2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -238,6 +233,14 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "销售数量*";
             // 
+            // text_customers_id
+            // 
+            this.text_customers_id.Location = new System.Drawing.Point(99, 115);
+            this.text_customers_id.Multiline = true;
+            this.text_customers_id.Name = "text_customers_id";
+            this.text_customers_id.Size = new System.Drawing.Size(122, 21);
+            this.text_customers_id.TabIndex = 7;
+            // 
             // text_Order_id
             // 
             this.text_Order_id.Location = new System.Drawing.Point(99, 33);
@@ -326,6 +329,14 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "员工编号*";
             // 
+            // text_customers_id2
+            // 
+            this.text_customers_id2.Location = new System.Drawing.Point(113, 747);
+            this.text_customers_id2.Multiline = true;
+            this.text_customers_id2.Name = "text_customers_id2";
+            this.text_customers_id2.Size = new System.Drawing.Size(121, 21);
+            this.text_customers_id2.TabIndex = 27;
+            // 
             // text_Order_id2
             // 
             this.text_Order_id2.Location = new System.Drawing.Point(113, 670);
@@ -394,7 +405,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox_Customers_id);
             this.groupBox1.Controls.Add(this.dateTimePicker_Ariver_date);
             this.groupBox1.Controls.Add(this.dateTimePicker_Send_date);
             this.groupBox1.Controls.Add(this.dateTimePicker_Order_date);
@@ -415,6 +425,7 @@
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.text_Transporter_id);
             this.groupBox1.Controls.Add(this.text_Order_num);
+            this.groupBox1.Controls.Add(this.text_customers_id);
             this.groupBox1.Controls.Add(this.text_Order_id);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -699,48 +710,11 @@
             this.comboBox__Employee_id2.TabIndex = 51;
             this.comboBox__Employee_id2.ValueMember = "Employee_id";
             // 
-            // comboBox_Customers_id
-            // 
-            this.comboBox_Customers_id.DataSource = this.customersBindingSource;
-            this.comboBox_Customers_id.DisplayMember = "Customers_id";
-            this.comboBox_Customers_id.FormattingEnabled = true;
-            this.comboBox_Customers_id.Location = new System.Drawing.Point(99, 115);
-            this.comboBox_Customers_id.Name = "comboBox_Customers_id";
-            this.comboBox_Customers_id.Size = new System.Drawing.Size(121, 20);
-            this.comboBox_Customers_id.TabIndex = 33;
-            this.comboBox_Customers_id.ValueMember = "Customers_id";
-            // 
-            // 海产品管理系统DataSet4
-            // 
-            this.海产品管理系统DataSet4.DataSetName = "海产品管理系统DataSet4";
-            this.海产品管理系统DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataMember = "Customers";
-            this.customersBindingSource.DataSource = this.海产品管理系统DataSet4;
-            // 
-            // customersTableAdapter
-            // 
-            this.customersTableAdapter.ClearBeforeFill = true;
-            // 
-            // comboBox_Customers_id2
-            // 
-            this.comboBox_Customers_id2.DataSource = this.customersBindingSource;
-            this.comboBox_Customers_id2.DisplayMember = "Customers_id";
-            this.comboBox_Customers_id2.FormattingEnabled = true;
-            this.comboBox_Customers_id2.Location = new System.Drawing.Point(113, 753);
-            this.comboBox_Customers_id2.Name = "comboBox_Customers_id2";
-            this.comboBox_Customers_id2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox_Customers_id2.TabIndex = 52;
-            this.comboBox_Customers_id2.ValueMember = "Customers_id";
-            // 
             // Sell_order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 957);
-            this.Controls.Add(this.comboBox_Customers_id2);
             this.Controls.Add(this.comboBox__Employee_id2);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.comboBox_Goods_id2);
@@ -762,6 +736,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.textBox_cost2);
             this.Controls.Add(this.btnSave2);
+            this.Controls.Add(this.text_customers_id2);
             this.Controls.Add(this.text_Order_id2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -782,8 +757,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -805,6 +778,7 @@
         private System.Windows.Forms.TextBox textBox_Discount2;
         private System.Windows.Forms.TextBox text_Order_num2;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox text_customers_id;
         private System.Windows.Forms.TextBox text_Order_id;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -814,6 +788,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSave2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox text_customers_id2;
         private System.Windows.Forms.TextBox text_Order_id2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -856,10 +831,5 @@
         private System.Windows.Forms.ComboBox comboBox_Goods_id2;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox comboBox__Employee_id2;
-        private System.Windows.Forms.ComboBox comboBox_Customers_id;
-        private 海产品管理系统DataSet4 海产品管理系统DataSet4;
-        private System.Windows.Forms.BindingSource customersBindingSource;
-        private 海产品管理系统DataSet4TableAdapters.CustomersTableAdapter customersTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox_Customers_id2;
     }
 }
