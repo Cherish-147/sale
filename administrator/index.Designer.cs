@@ -79,7 +79,7 @@
             // 部门信息ToolStripMenuItem
             // 
             this.部门信息ToolStripMenuItem.Name = "部门信息ToolStripMenuItem";
-            this.部门信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.部门信息ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.部门信息ToolStripMenuItem.Text = "部门信息";
             this.部门信息ToolStripMenuItem.Click += new System.EventHandler(this.部门信息ToolStripMenuItem_Click);
             // 
@@ -96,6 +96,7 @@
             this.商品信息ToolStripMenuItem.Name = "商品信息ToolStripMenuItem";
             this.商品信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.商品信息ToolStripMenuItem.Text = "商品信息";
+            this.商品信息ToolStripMenuItem.Click += new System.EventHandler(this.商品信息ToolStripMenuItem_Click);
             // 
             // 订单ToolStripMenuItem
             // 
@@ -108,7 +109,7 @@
             // 订单信息ToolStripMenuItem
             // 
             this.订单信息ToolStripMenuItem.Name = "订单信息ToolStripMenuItem";
-            this.订单信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.订单信息ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.订单信息ToolStripMenuItem.Text = "订单信息";
             this.订单信息ToolStripMenuItem.Click += new System.EventHandler(this.订单信息ToolStripMenuItem_Click);
             // 

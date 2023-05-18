@@ -34,5 +34,11 @@ namespace sale.administrator
             Sell_order sq =new Sell_order();
             sq.Show();
         }
+
+        private void 商品信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Goods g1 = new Goods();
+            g1.ShowDialog();
+        }
     }
 }

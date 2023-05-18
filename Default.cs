@@ -89,7 +89,7 @@ namespace sale
             showAll();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)//模糊查询
         {
             if (textBox1.Text == "")
             {
