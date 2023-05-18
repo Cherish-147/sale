@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.btn_buy = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,11 +170,32 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.查询_Click);
             // 
+            // btn_buy
+            // 
+            this.btn_buy.Location = new System.Drawing.Point(625, 422);
+            this.btn_buy.Name = "btn_buy";
+            this.btn_buy.Size = new System.Drawing.Size(75, 23);
+            this.btn_buy.TabIndex = 12;
+            this.btn_buy.Text = "购买";
+            this.btn_buy.UseVisualStyleBackColor = true;
+            this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(715, 422);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "查看购物车";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_buy);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -208,5 +231,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_buy;
+        private System.Windows.Forms.Button button6;
     }
 }

@@ -40,5 +40,11 @@ namespace sale.administrator
             Goods g1 = new Goods();
             g1.ShowDialog();
         }
+
+        private void 供应商ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            supplier s1 = new supplier();
+            s1.ShowDialog();
+        }
     }
 }

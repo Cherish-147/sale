@@ -153,5 +153,10 @@ namespace sale
             CHX_Product ch1 = new CHX_Product();
             ch1.Show();
         }
+
+        private void btn_buy_Click(object sender, EventArgs e)//购买
+        {
+
+        }
     }
 }
