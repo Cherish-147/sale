@@ -19,7 +19,7 @@ namespace sale
         }
         SqlDataAdapter daProduct;//适配器对象
         DataSet ds =new DataSet();//
-        public static string Goods_id;
+        public static string Goods_id="";
         void init()//
         {
             DB.Getcn();
@@ -156,7 +156,34 @@ namespace sale
 
         private void btn_buy_Click(object sender, EventArgs e)//购买
         {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    string _selectValue = dataGridView1.Rows[i].Cells["acCode"].EditedFormattedValue.ToString();
+                    if (_selectValue == "True")
+                    {
+                        Goods_id = dataGridView1.Rows[i].Cells["Goods_id"].Value.ToString();
+                    }
+                }
+            }
+            if (Goods_id == "")
+            {
+                MessageBox.Show("请选择一项商品，再点击购买");
+            }
+            else
+            {
+                this.Dispose();
+                Dialog_buy ch3 = new Dialog_buy();
+                ch3.Show();
+            }
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)//查看购物车
+        {
+            Cartltem ch4 = new Cartltem();
+            ch4.Show();
         }
     }
 }

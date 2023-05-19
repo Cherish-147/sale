@@ -46,5 +46,11 @@ namespace sale.administrator
             supplier s1 = new supplier();
             s1.ShowDialog();
         }
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            supplier s1 = new supplier();
+            s1.ShowDialog();
+        }
     }
 }

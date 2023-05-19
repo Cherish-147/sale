@@ -83,6 +83,12 @@
     <Compile Include="administrator\supplier.Designer.cs">
       <DependentUpon>supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cartltem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cartltem.Designer.cs">
+      <DependentUpon>Cartltem.cs</DependentUpon>
+    </Compile>
     <Compile Include="CHpwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="administrator\supplier.resx">
       <DependentUpon>supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cartltem.resx">
+      <DependentUpon>Cartltem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CHpwd.resx">
       <DependentUpon>CHpwd.cs</DependentUpon>
