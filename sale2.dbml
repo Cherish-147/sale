@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="海产品管理系统" Class="saleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=海产品管理系统;Integrated Security=True" SettingsObjectName="sale.Properties.Settings" SettingsPropertyName="海产品管理系统ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OrderItem" Member="OrderItem">
+    <Type Name="OrderItem">
+      <Column Name="Item_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="order_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ListPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="totalprice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Order_OrderItem" Member="Order" ThisKey="order_id" OtherKey="order_id" Type="Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="Users">
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="keys" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Users_Order" Member="Order" ThisKey="username" OtherKey="username" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cartltem" Member="Cartltem">
+    <Type Name="Cartltem">
+      <Column Name="Cartltem_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Goods_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ListPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Goods" Member="Goods">
+    <Type Name="Goods">
+      <Column Name="Goods_id" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Goods_name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Classification_id" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Supplier_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Unit_price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Stock_quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Order_quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Storehouse_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employee">
+    <Type Name="Employee">
+      <Column Name="Employee_id" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Employee_name" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Birth_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Hire_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Column Name="Wages" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Department_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Resume" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Order">
+    <Type Name="Order">
+      <Column Name="order_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="order_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="province" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="zip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Order_OrderItem" Member="OrderItem" ThisKey="order_id" OtherKey="order_id" Type="OrderItem" />
+      <Association Name="Users_Order" Member="Users" ThisKey="username" OtherKey="username" Type="Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

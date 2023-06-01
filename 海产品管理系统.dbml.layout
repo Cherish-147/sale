@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="海产品管理系统">
+  <DataContextMoniker Name="/海产品管理系统DataContext" />
+  <nestedChildShapes>
+    <classShape Id="a939aec5-9e89-43ce-a022-bed0d84944d0" absoluteBounds="0.625, 0.5, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/海产品管理系统DataContext/Users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd5d150a-2e0b-49fb-be5c-eb968dbdce58" absoluteBounds="0.64000000000000012, 0.96, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62c16be2-1b6c-4d68-ba2a-c20876c1c1db" absoluteBounds="3.625, 0.75, 2, 2.6460697428385416">
+      <DataClassMoniker Name="/海产品管理系统DataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29935313-c8ed-4b8f-85e3-3173415c8336" absoluteBounds="3.6399999999999997, 1.21, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5cd83b3-d2f4-458f-b5b2-2ca6e4d29e97" absoluteBounds="0.5, 2.125, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/海产品管理系统DataContext/Goods" />
+      <nestedChildShapes>
+        <elementListCompartment Id="341ca2ce-0907-45ac-bfb3-ed8ab7774365" absoluteBounds="0.51500000000000012, 2.585, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6d0d5d4-ddd0-4d7a-99d8-b1ac4cfb2c2b" absoluteBounds="2.375, 3, 2, 1.9068933105468751">
+      <DataClassMoniker Name="/海产品管理系统DataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5f76e74-6015-46fa-93f4-05c163a50270" absoluteBounds="2.39, 3.46, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 4.90689331054688); (3.375 : 5.15689331054688); (4.625 : 5.15689331054688); (4.625 : 3.39606974283854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/海产品管理系统DataContext/Department/Department_Employee" />
+      <nodes>
+        <classShapeMoniker Id="b6d0d5d4-ddd0-4d7a-99d8-b1ac4cfb2c2b" />
+        <classShapeMoniker Id="62c16be2-1b6c-4d68-ba2a-c20876c1c1db" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
