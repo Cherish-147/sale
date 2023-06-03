@@ -1,24 +1,19 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-
-using System.Xml.Serialization;
-using sale.administrator;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace sale
 {
-    public partial class Cartltem : Form
+    public partial class CartItem1 : Form
     {
-        public Cartltem()
+        public CartItem1()
         {
             InitializeComponent();
         }
@@ -63,7 +58,7 @@ namespace sale
             }
         }
 
-        private void Cartltem_Load(object sender, EventArgs e)//窗体加载
+        private void CartItem1_Load(object sender, EventArgs e)//窗体加载
         {
             DB.Getcn();
             string str = "select * from Cartltem where username='" + Login.username + "'";
@@ -121,26 +116,9 @@ namespace sale
                 }
                 DB.cn.Close();
             }
-            //    for (int i = 0; i < datagridview1.rows.count - 1;)
-            //    {
-
-            //        if (datagridview1.rows[0].cells["username"].value.tostring() == login.username)
-            //        {
-            //            db.getcn();
-            //            修改商品表中的库存
-            //            string str = "update goods set stock_quantity=stock_quantity+" +
-            //                    int.parse(datagridview1.rows[0].cells["stock_quantity"].value.tostring())
-            //                    + "where product_id='" +
-            //                    datagridview1.rows[0].cells["goods_id"].value.tostring() + "'";
-            //            db.sqlex(str);
-
-            //            datagridview1.rows.removeat(0);
-            //        }
-            //    }
-            //}//try{}
         }
 
-        private void button3_Click(object sender, EventArgs e)//关闭
+        private void button2_Click(object sender, EventArgs e)//关闭
         {
             this.Dispose();
             pro_sum = 0;
@@ -148,13 +126,7 @@ namespace sale
             d1.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            Order1 order = new Order1();
-            order.ShowDialog();
 
-        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -182,7 +154,6 @@ namespace sale
                 Dialog_buy d1 = new Dialog_buy();
                 d1.ShowDialog();
             }
-
         }
     }
 }

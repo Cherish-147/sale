@@ -182,7 +182,8 @@ namespace sale
 
         private void button6_Click(object sender, EventArgs e)//查看购物车
         {
-            Cartltem ch4 = new Cartltem();
+           // Cartltem ch4 = new Cartltem();//严重性	代码	说明	项目	文件	行	禁止显示状态错误 CS0121  以下方法或属性之间的调用具有二义性:“Cartltem.Cartltem()”和“Cartltem.Cartltem()”	sale F:\C#\sales\sale\Default.cs	185	活动
+           CartItem1 ch4 = new CartItem1();
             ch4.Show();
         }
     }

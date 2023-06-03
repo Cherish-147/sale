@@ -90,11 +90,11 @@
     <Compile Include="administrator\supplier.Designer.cs">
       <DependentUpon>supplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cartltem.cs">
+    <Compile Include="CartItem1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cartltem.Designer.cs">
-      <DependentUpon>Cartltem.cs</DependentUpon>
+    <Compile Include="CartItem1.Designer.cs">
+      <DependentUpon>CartItem1.cs</DependentUpon>
     </Compile>
     <Compile Include="CHpwd.cs">
       <SubType>Form</SubType>
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="administrator\supplier.resx">
       <DependentUpon>supplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cartltem.resx">
-      <DependentUpon>Cartltem.cs</DependentUpon>
+    <EmbeddedResource Include="CartItem1.resx">
+      <DependentUpon>CartItem1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CHpwd.resx">
       <DependentUpon>CHpwd.cs</DependentUpon>
