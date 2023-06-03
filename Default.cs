@@ -54,6 +54,7 @@ namespace sale
             this.dataGridView1.Columns[2].HeaderText = "供应商编号";
             this.dataGridView1.Columns[3].HeaderText = "产品名称";
             this.dataGridView1.Columns[4].HeaderText = "库存";
+            //this.dataGridView1.Columns[4].HeaderText = "单价";
 
         }
         void showXz()//显示选择项
@@ -182,7 +183,7 @@ namespace sale
 
         private void button6_Click(object sender, EventArgs e)//查看购物车
         {
-            Cartltem ch4 = new Cartltem();
+            CartItem1 ch4 = new CartItem1();
             ch4.Show();
         }
     }

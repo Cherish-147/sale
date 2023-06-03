@@ -24,7 +24,7 @@ namespace sale
         private void button1_Click(object sender, EventArgs e)
         {
             //获取购物车内商品项目
-            List<Cartltem> cartItemList = (from c in db.Cartltem
+            List<Cartltem1> cartItemList = (from c in db.Cartltem
                                            where c.username == Login.username
                                            select c).ToList();
 
@@ -41,7 +41,7 @@ namespace sale
 
             //根据购物车商品清单创建订单明细   
             OrderItem orItem = null;
-            foreach (Cartltem cartItem in cartItemList)
+            foreach (Cartltem1 cartItem in cartItemList)
             {
                 //依次添加每件商品为订单明细                
                 orItem = new OrderItem();

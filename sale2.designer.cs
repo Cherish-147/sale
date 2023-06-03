@@ -36,9 +36,9 @@ namespace sale
     partial void InsertUsers(Users instance);
     partial void UpdateUsers(Users instance);
     partial void DeleteUsers(Users instance);
-    partial void InsertCartltem(Cartltem instance);
-    partial void UpdateCartltem(Cartltem instance);
-    partial void DeleteCartltem(Cartltem instance);
+    partial void InsertCartltem(Cartltem1 instance);
+    partial void UpdateCartltem(Cartltem1 instance);
+    partial void DeleteCartltem(Cartltem1 instance);
     partial void InsertGoods(Goods instance);
     partial void UpdateGoods(Goods instance);
     partial void DeleteGoods(Goods instance);
@@ -96,11 +96,11 @@ namespace sale
 			}
 		}
 		
-		public System.Data.Linq.Table<Cartltem> Cartltem
+		public System.Data.Linq.Table<Cartltem1> Cartltem
 		{
 			get
 			{
-				return this.GetTable<Cartltem>();
+				return this.GetTable<Cartltem1>();
 			}
 		}
 		
@@ -491,7 +491,7 @@ namespace sale
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Cartltem")]
-	public partial class Cartltem : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Cartltem1 : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -526,7 +526,7 @@ namespace sale
     partial void OnQtyChanged();
     #endregion
 		
-		public Cartltem()
+		public Cartltem1()
 		{
 			OnCreated();
 		}
