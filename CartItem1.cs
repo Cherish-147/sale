@@ -118,12 +118,10 @@ namespace sale
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)//关闭
+        private void button2_Click(object sender, EventArgs e)//结算
         {
-            this.Dispose();
-            pro_sum = 0;
-            Default d1 = new Default();
-            d1.ShowDialog();
+            Order1 order1 = new Order1();
+            order1.ShowDialog();
         }
 
 
@@ -154,6 +152,14 @@ namespace sale
                 Dialog_buy d1 = new Dialog_buy();
                 d1.ShowDialog();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)//关闭
+        {
+            this.Dispose();
+            pro_sum = 0;
+            Default d1 = new Default();
+            d1.ShowDialog();
         }
     }
 }

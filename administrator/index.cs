@@ -52,5 +52,11 @@ namespace sale.administrator
             supplier s1 = new supplier();
             s1.ShowDialog();
         }
+
+        private void 订单审核ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            administrator.Formorder fl = new Formorder();
+            fl.ShowDialog();
+        }
     }
 }

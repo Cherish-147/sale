@@ -47,7 +47,8 @@ namespace sale
                     }
                     else
                     {
-                        string ser = "insert into Cartltem  values('" + Login.username + "'," + int.Parse(Default.Goods_id) + ",'" + name.Text + "'," + decimal.Parse(dj.Text) + "," + int.Parse(textbox_buynum.Text) + ")";
+                        string ser = "insert into Cartltem  values('" + Login.username + "'," + int.Parse(Default.Goods_id) + ",'" 
+                            + name.Text + "'," + decimal.Parse(kucun.Text) + "," + int.Parse(textbox_buynum.Text) + ")";
                         //string ser = "insert into 购物车表 values('" + Login.username + "',"
                         //+ int.Parse(Default.go_id) + ",'"
                         //+ name.Text + "'," + decimal.Parse(textBox1.Text) + "," + int.Parse(textBox3.Text) + ")"; 

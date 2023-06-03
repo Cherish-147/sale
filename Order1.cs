@@ -23,7 +23,7 @@ namespace sale
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //获取购物车内商品项目
+             //获取购物车内商品项目
             List<Cartltem> cartItemList = (from c in db.Cartltem
                                            where c.username == Login.username
                                            select c).ToList();

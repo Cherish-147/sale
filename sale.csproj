@@ -60,6 +60,12 @@
     <Compile Include="administrator\employee.Designer.cs">
       <DependentUpon>employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="administrator\Formorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator\Formorder.Designer.cs">
+      <DependentUpon>Formorder.cs</DependentUpon>
+    </Compile>
     <Compile Include="administrator\FormOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="administrator\index.Designer.cs">
       <DependentUpon>index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="administrator\orderitem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator\orderitem.Designer.cs">
+      <DependentUpon>orderitem.cs</DependentUpon>
     </Compile>
     <Compile Include="administrator\Sell_order.cs">
       <SubType>Form</SubType>
@@ -178,6 +190,9 @@
     <EmbeddedResource Include="administrator\employee.resx">
       <DependentUpon>employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="administrator\Formorder.resx">
+      <DependentUpon>Formorder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="administrator\FormOrders.resx">
       <DependentUpon>FormOrders.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="administrator\index.resx">
       <DependentUpon>index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrator\orderitem.resx">
+      <DependentUpon>orderitem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="administrator\Sell_order.resx">
       <DependentUpon>Sell_order.cs</DependentUpon>
