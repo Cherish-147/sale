@@ -58,5 +58,11 @@ namespace sale.administrator
             administrator.FormOrder fl = new FormOrder();
             fl.ShowDialog();
         }
+
+        private void 商品信息ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Product pro = new Product();
+            pro.ShowDialog();
+        }
     }
 }
