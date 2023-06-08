@@ -29,7 +29,7 @@ namespace sale
                                            select c).ToList();
 
             //根据送货地址信息创建订单头，状态为“未审核”
-            Order order = new Order();
+            Orders order = new Orders();
             order.username = Login.username;
             order.province = state.Text;
             order.city = city.Text;
@@ -58,7 +58,7 @@ namespace sale
                 db.Cartltem.DeleteOnSubmit(cartItem);
             }
 
-            db.Order.InsertOnSubmit(order);
+            db.Orders.InsertOnSubmit(order);
             db.SubmitChanges();
 
             MessageBox.Show("订单已提交");

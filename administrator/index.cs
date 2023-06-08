@@ -55,7 +55,7 @@ namespace sale.administrator
 
         private void 订单审核ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            administrator.Formorder fl = new Formorder();
+            administrator.FormOrder fl = new FormOrder();
             fl.ShowDialog();
         }
     }

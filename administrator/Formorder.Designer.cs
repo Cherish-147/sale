@@ -1,6 +1,6 @@
 ﻿namespace sale.administrator
 {
-    partial class Formorder
+    partial class FormOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -42,13 +42,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(463, 344);
+            this.button1.Location = new System.Drawing.Point(402, 289);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 40);
+            this.button1.Size = new System.Drawing.Size(119, 39);
             this.button1.TabIndex = 3;
             this.button1.Text = "关闭";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -61,11 +60,11 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(37, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(931, 198);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -78,7 +77,7 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "用户名";
+            this.Column2.HeaderText = "用户";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
@@ -120,18 +119,19 @@
             this.Column7.Name = "Column7";
             this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column7.Text = "审核";
             this.Column7.Width = 125;
             // 
-            // Formorder
+            // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 491);
+            this.ClientSize = new System.Drawing.Size(1005, 539);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Formorder";
-            this.Text = "Formorder";
-            this.Load += new System.EventHandler(this.Formorder_Load);
+            this.Name = "FormOrder";
+            this.Text = "FormOrder";
+            this.Load += new System.EventHandler(this.FormOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

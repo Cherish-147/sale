@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace sale.administrator
 {
-    public partial class Formorder : Form
+    public partial class FormOrder : Form
     {
-        public Formorder()
+        public FormOrder()
         {
             InitializeComponent();
         }
-        public static int Order_id;
-        void showAll()
+        public static int Order_Id;
+        void showAll()//显示全部
         {
             DB.Getcn();
-            string str = "select * from [Order]";
+            string str = "select * from Orders";
             SqlCommand cmd = new SqlCommand(str, DB.cn);
             SqlDataReader rdr = cmd.ExecuteReader();
             dataGridView1.Rows.Clear();
@@ -39,11 +39,6 @@ namespace sale.administrator
             rdr.Close();
             DB.cn.Close();
         }
-        private void Formorder_Load(object sender, EventArgs e)
-        {
-            showAll();
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int n = dataGridView1.CurrentRow.Index;
@@ -52,21 +47,21 @@ namespace sale.administrator
             {
                 dataGridView1.Rows[n].Cells["Column5"].Value = "已审核";
                 DB.Getcn();
-                string str = "upadte Order set stauts='已审核' where order_id='"
-                    + dataGridView1.Rows[n].Cells["Column1"].ToString() + "'";
-                DB.Getcn();
+                string str = "update Orders set status='已审核' where order_id='"
+                    + dataGridView1.Rows[n].Cells["Column1"].Value.ToString() + "'";
+                DB.sqlEx(str);
             }
             if (cIndex == 5)
             {
-                Order_id = int.Parse(dataGridView1.Rows[n].Cells["Column1"].Value.ToString());
-                orderitem orl = new orderitem();
-                orl.ShowDialog();
+                Order_Id = int.Parse(dataGridView1.Rows[n].Cells["Column1"].Value.ToString());
+                orderitem or1 = new orderitem();
+                or1.ShowDialog();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormOrder_Load(object sender, EventArgs e)
         {
-            this.Close();
+            showAll();
         }
     }
 }

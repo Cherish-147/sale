@@ -45,9 +45,9 @@ namespace sale
     partial void InsertEmployee(Employee instance);
     partial void UpdateEmployee(Employee instance);
     partial void DeleteEmployee(Employee instance);
-    partial void InsertOrder(Order instance);
-    partial void UpdateOrder(Order instance);
-    partial void DeleteOrder(Order instance);
+    partial void InsertOrders(Orders instance);
+    partial void UpdateOrders(Orders instance);
+    partial void DeleteOrders(Orders instance);
     #endregion
 		
 		public saleDataContext() : 
@@ -120,11 +120,11 @@ namespace sale
 			}
 		}
 		
-		public System.Data.Linq.Table<Order> Order
+		public System.Data.Linq.Table<Orders> Orders
 		{
 			get
 			{
-				return this.GetTable<Order>();
+				return this.GetTable<Orders>();
 			}
 		}
 	}
@@ -147,7 +147,7 @@ namespace sale
 		
 		private int _totalprice;
 		
-		private EntityRef<Order> _Order;
+		private EntityRef<Orders> _Orders;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -169,7 +169,7 @@ namespace sale
 		
 		public OrderItem()
 		{
-			this._Order = default(EntityRef<Order>);
+			this._Orders = default(EntityRef<Orders>);
 			OnCreated();
 		}
 		
@@ -204,7 +204,7 @@ namespace sale
 			{
 				if ((this._order_id != value))
 				{
-					if (this._Order.HasLoadedOrAssignedValue)
+					if (this._Orders.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -297,26 +297,26 @@ namespace sale
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_OrderItem", Storage="_Order", ThisKey="order_id", OtherKey="order_id", IsForeignKey=true)]
-		public Order Order
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Orders_OrderItem", Storage="_Orders", ThisKey="order_id", OtherKey="order_id", IsForeignKey=true)]
+		public Orders Orders
 		{
 			get
 			{
-				return this._Order.Entity;
+				return this._Orders.Entity;
 			}
 			set
 			{
-				Order previousValue = this._Order.Entity;
+				Orders previousValue = this._Orders.Entity;
 				if (((previousValue != value) 
-							|| (this._Order.HasLoadedOrAssignedValue == false)))
+							|| (this._Orders.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Order.Entity = null;
+						this._Orders.Entity = null;
 						previousValue.OrderItem.Remove(this);
 					}
-					this._Order.Entity = value;
+					this._Orders.Entity = value;
 					if ((value != null))
 					{
 						value.OrderItem.Add(this);
@@ -326,7 +326,7 @@ namespace sale
 					{
 						this._order_id = default(int);
 					}
-					this.SendPropertyChanged("Order");
+					this.SendPropertyChanged("Orders");
 				}
 			}
 		}
@@ -364,7 +364,7 @@ namespace sale
 		
 		private string _keys;
 		
-		private EntitySet<Order> _Order;
+		private EntitySet<Orders> _Orders;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -380,7 +380,7 @@ namespace sale
 		
 		public Users()
 		{
-			this._Order = new EntitySet<Order>(new Action<Order>(this.attach_Order), new Action<Order>(this.detach_Order));
+			this._Orders = new EntitySet<Orders>(new Action<Orders>(this.attach_Orders), new Action<Orders>(this.detach_Orders));
 			OnCreated();
 		}
 		
@@ -444,16 +444,16 @@ namespace sale
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Users_Order", Storage="_Order", ThisKey="username", OtherKey="username")]
-		public EntitySet<Order> Order
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Users_Orders", Storage="_Orders", ThisKey="username", OtherKey="username")]
+		public EntitySet<Orders> Orders
 		{
 			get
 			{
-				return this._Order;
+				return this._Orders;
 			}
 			set
 			{
-				this._Order.Assign(value);
+				this._Orders.Assign(value);
 			}
 		}
 		
@@ -477,13 +477,13 @@ namespace sale
 			}
 		}
 		
-		private void attach_Order(Order entity)
+		private void attach_Orders(Orders entity)
 		{
 			this.SendPropertyChanging();
 			entity.Users = this;
 		}
 		
-		private void detach_Order(Order entity)
+		private void detach_Orders(Orders entity)
 		{
 			this.SendPropertyChanging();
 			entity.Users = null;
@@ -1204,8 +1204,8 @@ namespace sale
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Order]")]
-	public partial class Order : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Orders")]
+	public partial class Orders : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1256,7 +1256,7 @@ namespace sale
     partial void OnstatusChanged();
     #endregion
 		
-		public Order()
+		public Orders()
 		{
 			this._OrderItem = new EntitySet<OrderItem>(new Action<OrderItem>(this.attach_OrderItem), new Action<OrderItem>(this.detach_OrderItem));
 			this._Users = default(EntityRef<Users>);
@@ -1447,7 +1447,7 @@ namespace sale
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_OrderItem", Storage="_OrderItem", ThisKey="order_id", OtherKey="order_id")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Orders_OrderItem", Storage="_OrderItem", ThisKey="order_id", OtherKey="order_id")]
 		public EntitySet<OrderItem> OrderItem
 		{
 			get
@@ -1460,7 +1460,7 @@ namespace sale
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Users_Order", Storage="_Users", ThisKey="username", OtherKey="username", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Users_Orders", Storage="_Users", ThisKey="username", OtherKey="username", IsForeignKey=true)]
 		public Users Users
 		{
 			get
@@ -1477,12 +1477,12 @@ namespace sale
 					if ((previousValue != null))
 					{
 						this._Users.Entity = null;
-						previousValue.Order.Remove(this);
+						previousValue.Orders.Remove(this);
 					}
 					this._Users.Entity = value;
 					if ((value != null))
 					{
-						value.Order.Add(this);
+						value.Orders.Add(this);
 						this._username = value.username;
 					}
 					else
@@ -1517,13 +1517,13 @@ namespace sale
 		private void attach_OrderItem(OrderItem entity)
 		{
 			this.SendPropertyChanging();
-			entity.Order = this;
+			entity.Orders = this;
 		}
 		
 		private void detach_OrderItem(OrderItem entity)
 		{
 			this.SendPropertyChanging();
-			entity.Order = null;
+			entity.Orders = null;
 		}
 	}
 }

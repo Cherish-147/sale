@@ -22,7 +22,7 @@ namespace sale.administrator
         void init()
         {
             DB.Getcn();
-            string str = "select * from OrderItem where order_id=" + Formorder.Order_id + "";
+            string str = "select * from OrderItem where order_id=" + FormOrder.Order_Id + "";
             daorderItem = new SqlDataAdapter(str, DB.cn);
             daorderItem.Fill(ds, "orderItem_info");
         }
@@ -40,6 +40,11 @@ namespace sale.administrator
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,7 @@
       <Column Name="ListPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Qty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="totalprice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Order_OrderItem" Member="Order" ThisKey="order_id" OtherKey="order_id" Type="Order" IsForeignKey="true" />
+      <Association Name="Orders_OrderItem" Member="Orders" ThisKey="order_id" OtherKey="order_id" Type="Orders" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Users" Member="Users">
@@ -16,7 +16,7 @@
       <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="pwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="keys" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Users_Order" Member="Order" ThisKey="username" OtherKey="username" Type="Order" />
+      <Association Name="Users_Orders" Member="Orders" ThisKey="username" OtherKey="username" Type="Orders" />
     </Type>
   </Table>
   <Table Name="dbo.Cartltem" Member="Cartltem">
@@ -56,8 +56,8 @@
       <Column Name="Resume" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.[Order]" Member="Order">
-    <Type Name="Order">
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Orders">
       <Column Name="order_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="order_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -67,8 +67,8 @@
       <Column Name="zip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="phone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Order_OrderItem" Member="OrderItem" ThisKey="order_id" OtherKey="order_id" Type="OrderItem" />
-      <Association Name="Users_Order" Member="Users" ThisKey="username" OtherKey="username" Type="Users" IsForeignKey="true" />
+      <Association Name="Orders_OrderItem" Member="OrderItem" ThisKey="order_id" OtherKey="order_id" Type="OrderItem" />
+      <Association Name="Users_Orders" Member="Users" ThisKey="username" OtherKey="username" Type="Users" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
