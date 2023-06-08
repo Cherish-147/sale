@@ -71,6 +71,12 @@
     <Compile Include="administrator\index.Designer.cs">
       <DependentUpon>index.cs</DependentUpon>
     </Compile>
+    <Compile Include="administrator\product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator\product.Designer.cs">
+      <DependentUpon>product.cs</DependentUpon>
+    </Compile>
     <Compile Include="administrator\Sell_order.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="administrator\index.resx">
       <DependentUpon>index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrator\product.resx">
+      <DependentUpon>product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="administrator\Sell_order.resx">
       <DependentUpon>Sell_order.cs</DependentUpon>
