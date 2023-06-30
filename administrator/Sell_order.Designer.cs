@@ -96,12 +96,17 @@
             this.comboBox_Goods_id2 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.comboBox__Employee_id2 = new System.Windows.Forms.ComboBox();
+            this.海产品管理系统DataSet12 = new sale.海产品管理系统DataSet12();
+            this.goodsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsTableAdapter1 = new sale.海产品管理系统DataSet12TableAdapters.GoodsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -464,7 +469,7 @@
             // 
             // comboBox_Goods_id
             // 
-            this.comboBox_Goods_id.DataSource = this.goodsBindingSource;
+            this.comboBox_Goods_id.DataSource = this.goodsBindingSource1;
             this.comboBox_Goods_id.DisplayMember = "Goods_id";
             this.comboBox_Goods_id.FormattingEnabled = true;
             this.comboBox_Goods_id.Location = new System.Drawing.Point(557, 33);
@@ -710,6 +715,20 @@
             this.comboBox__Employee_id2.TabIndex = 51;
             this.comboBox__Employee_id2.ValueMember = "Employee_id";
             // 
+            // 海产品管理系统DataSet12
+            // 
+            this.海产品管理系统DataSet12.DataSetName = "海产品管理系统DataSet12";
+            this.海产品管理系统DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // goodsBindingSource1
+            // 
+            this.goodsBindingSource1.DataMember = "Goods";
+            this.goodsBindingSource1.DataSource = this.海产品管理系统DataSet12;
+            // 
+            // goodsTableAdapter1
+            // 
+            this.goodsTableAdapter1.ClearBeforeFill = true;
+            // 
             // Sell_order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -757,6 +776,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.海产品管理系统DataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,5 +852,8 @@
         private System.Windows.Forms.ComboBox comboBox_Goods_id2;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox comboBox__Employee_id2;
+        private 海产品管理系统DataSet12 海产品管理系统DataSet12;
+        private System.Windows.Forms.BindingSource goodsBindingSource1;
+        private 海产品管理系统DataSet12TableAdapters.GoodsTableAdapter goodsTableAdapter1;
     }
 }

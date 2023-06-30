@@ -35,12 +35,13 @@
             this.部门信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.商品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.商品信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.商品信息ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.订单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.订单信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.订单审核ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.供应商ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.商品信息ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.可视化图表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             this.部门ToolStripMenuItem,
             this.商品ToolStripMenuItem,
             this.订单ToolStripMenuItem,
-            this.供应商ToolStripMenuItem});
+            this.供应商ToolStripMenuItem,
+            this.可视化图表ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1229, 25);
@@ -100,9 +102,16 @@
             // 商品信息ToolStripMenuItem
             // 
             this.商品信息ToolStripMenuItem.Name = "商品信息ToolStripMenuItem";
-            this.商品信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.商品信息ToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.商品信息ToolStripMenuItem.Text = "商品信息0";
             this.商品信息ToolStripMenuItem.Click += new System.EventHandler(this.商品信息ToolStripMenuItem_Click);
+            // 
+            // 商品信息ToolStripMenuItem1
+            // 
+            this.商品信息ToolStripMenuItem1.Name = "商品信息ToolStripMenuItem1";
+            this.商品信息ToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.商品信息ToolStripMenuItem1.Text = "商品信息";
+            this.商品信息ToolStripMenuItem1.Click += new System.EventHandler(this.商品信息ToolStripMenuItem1_Click);
             // 
             // 订单ToolStripMenuItem
             // 
@@ -143,12 +152,12 @@
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
-            // 商品信息ToolStripMenuItem1
+            // 可视化图表ToolStripMenuItem
             // 
-            this.商品信息ToolStripMenuItem1.Name = "商品信息ToolStripMenuItem1";
-            this.商品信息ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.商品信息ToolStripMenuItem1.Text = "商品信息";
-            this.商品信息ToolStripMenuItem1.Click += new System.EventHandler(this.商品信息ToolStripMenuItem1_Click);
+            this.可视化图表ToolStripMenuItem.Name = "可视化图表ToolStripMenuItem";
+            this.可视化图表ToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.可视化图表ToolStripMenuItem.Text = "可视化图表";
+            this.可视化图表ToolStripMenuItem.Click += new System.EventHandler(this.可视化图表ToolStripMenuItem_Click);
             // 
             // index
             // 
@@ -180,5 +189,6 @@
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 订单审核ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 商品信息ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 可视化图表ToolStripMenuItem;
     }
 }

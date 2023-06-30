@@ -1,6 +1,6 @@
 ﻿namespace sale.administrator
 {
-    partial class Goods
+    partial class Goods1
     {
         /// <summary>
         /// Required designer variable.

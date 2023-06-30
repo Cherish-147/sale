@@ -22,14 +22,14 @@ namespace sale
             textBox1.Text = Login.username;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//修改密码
         {
             DB.Getcn();
-            string str = "select * from Users where username='" + textBox1.Text + "' and pwd='" + textBox2.Text + "'";
-            string sdr = "update username set pwd='" + textBox3.Text + "' where username='" + textBox1.Text + "'";
-            if (textBox2.Text=="")
+            string str = "select *from Users where username='" + textBox1.Text + "' and pwd='" + textBox2.Text + "'";
+            string sdr = "update Users set pwd='" + textBox3.Text + "'where username='" + textBox1.Text + "'";
+            if (textBox2.Text == "")
             {
-                MessageBox.Show("请输入原密码：");
+                MessageBox.Show("请输入原密码");
             }
             else
             {
@@ -40,34 +40,30 @@ namespace sale
                 }
                 else
                 {
-                    if (textBox3.Text == "" || textBox4.Text ==  "")
+                    if (textBox3.Text == "" || textBox4.Text == "")
                     {
-                        MessageBox.Show("请输入密码：");
-
+                        MessageBox.Show("请输入新密码");
                     }
                     else
                     {
                         if (textBox3.Text != textBox4.Text)
                         {
-                            MessageBox.Show("请重新输入密码");
+                            MessageBox.Show("两次密码不一致");
                         }
                         else
                         {
-                            if (textBox3.Text!= textBox4.Text)
-                            {
-                                MessageBox.Show("两次密码不一致");
-
-                            }
-                            else
-                            {
-                                DB.sqlEx(str);
-                                MessageBox.Show("修改成功");
-                                 
-                            }
+                            DB.sqlEx(sdr);
+                            MessageBox.Show("修改成功");
                         }
+                    
                     }
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

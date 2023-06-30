@@ -33,7 +33,7 @@ namespace sale
             dataGridView1.DataSource =dvProduct;//
 
         }
-        private void Default_Load(object sender, EventArgs e)//
+        private void Default_Load(object sender, EventArgs e)//响应事件
         {
             label2.Text=Login.username;
             init();

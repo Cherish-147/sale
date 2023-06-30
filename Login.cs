@@ -20,7 +20,7 @@ namespace sale
         public static bool flag2 = false;
         public static string username;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//登录
         {
              if (textBox1.Text == "" || textBox2.Text == "")
             {
@@ -80,6 +80,11 @@ namespace sale
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -14,9 +14,9 @@ using System.Reflection.Emit;
 
 namespace sale.administrator
 {
-    public partial class Goods : Form
+    public partial class Goods1 : Form
     {
-        public Goods()
+        public Goods1()
         {
             InitializeComponent();
         }
@@ -24,6 +24,13 @@ namespace sale.administrator
         DataSet ds = new DataSet();
         public static string goods_id = "";
         public static int index_id;
+        internal string Image;
+
+        public Goods1(string image)
+        {
+            Image = image;
+        }
+
         void init()//初始化函数
         {
             DB.Getcn();

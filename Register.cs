@@ -22,7 +22,7 @@ namespace sale
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//注册
         {
             if (textBox1.Text == "" || textBox2.Text == "")
             {
@@ -47,7 +47,7 @@ namespace sale
                     }
                     else
                     {
-                        string sdr = "insert into Users values('" + textBox1.Text + "','" + textBox2.Text + "',1)";
+                        string sdr = "insert into Users values('" + textBox1.Text + "','" + textBox2.Text + "',1)";//1是用户
                         DB.sqlEx(sdr);
                         MessageBox.Show("注册成功");
 
@@ -55,6 +55,11 @@ namespace sale
                 }
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)//退出
+        {
+            this.Close();
         }
     }
 }

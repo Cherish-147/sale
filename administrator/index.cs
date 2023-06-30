@@ -37,7 +37,7 @@ namespace sale.administrator
 
         private void 商品信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Goods g1 = new Goods();
+            Goods1 g1 = new Goods1();
             g1.ShowDialog();
         }
 
@@ -63,6 +63,12 @@ namespace sale.administrator
         {
             Product pro = new Product();
             pro.ShowDialog();
+        }
+
+        private void 可视化图表ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            administrator.FormData f2 = new FormData();
+            f2.ShowDialog();
         }
     }
 }

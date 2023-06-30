@@ -288,8 +288,9 @@ namespace sale.administrator
         }
         private void Sell_order_Load(object sender, EventArgs e)//窗体响应事件加载
         {
-            // TODO: 这行代码将数据加载到表“海产品管理系统DataSet3.Goods”中。您可以根据需要移动或移除它。
-            this.goodsTableAdapter.Fill(this.海产品管理系统DataSet3.Goods);
+            // TODO: 这行代码将数据加载到表“海产品管理系统DataSet12.Goods”中。您可以根据需要移动或移除它。
+            this.goodsTableAdapter1.Fill(this.海产品管理系统DataSet12.Goods);
+
             // TODO: 这行代码将数据加载到表“海产品管理系统DataSet2.Employee”中。您可以根据需要移动或移除它。
             this.employeeTableAdapter.Fill(this.海产品管理系统DataSet2.Employee);
 
